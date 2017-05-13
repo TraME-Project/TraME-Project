@@ -25,12 +25,9 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Additional Settings -->
-    <link href="css/trame_settings.css" rel="stylesheet">
-
-    <!-- Syntax Highlighter -->
-    <script type="text/javascript" src="js/syntaxhighlighter.js"></script>
-    <link type="text/css" rel="stylesheet" href="css/swift_theme.css">
+    <style>
+    h3:target { padding-top: 60px; margin-top: -60px;}
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,7 +63,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Versions<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="trame_cpp.html">C++</a>
+                                <a href="trame.html">C++</a>
                             </li>
                             <li>
                                 <a href="trame_r.html">R</a>
@@ -83,144 +80,60 @@
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Page Heading/Breadcrumbs -->
+        <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
-                <ol class="breadcrumb">
-                    <li><a href="http://www.trame-project.com">Home</a></li>
-                    <li class="active">TraME</li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">ARUMs <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="trame_docs_arums.html">ARUMs</a></li>
-                            <li class="divider"></li>
-                            <li><a href="trame_docs_arums_empirical.html">Empirical</a></li>
-                            <li><a href="trame_docs_arums_logit.html">Logit</a></li>
-                            <li><a href="trame_docs_arums_none.html">None</a></li>
-                            <li><a href="trame_docs_arums_probit.html">Probit</a></li>
-                            <li><a href="trame_docs_arums_rsc.html">RSC</a></li>
-                            <li><a href="trame_docs_arums_rusc.html">RUSC</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">MMFs <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="trame_docs_mmfs.html">MMFs</a></li>
-                            <li class="divider"></li>
-                            <li><a href="trame_docs_mmfs_cd.html">CD</a></li>
-                            <li><a href="trame_docs_mmfs_ces.html">CES</a></li>
-                            <li><a href="trame_docs_mmfs_geo.html">Geo</a></li>
-                            <li><a href="trame_docs_mmfs_min.html">Min</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transfers <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="trame_docs_transfers.html">Transfers</a></li>
-                            <li class="divider"></li>
-                            <li><a href="trame_docs_transfers_etu.html">ETU</a></li>
-                            <li><a href="trame_docs_transfers_ltu.html">LTU</a></li>
-                            <li><a href="trame_docs_transfers_ntu.html">NTU</a></li>
-                            <li><a href="trame_docs_transfers_tu.html">TU</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Markets <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="trame_docs_markets.html">Markets</a></li>
-                            <li class="divider"></li>
-                            <li><a href="trame_docs_markets_dse.html">DSE</a></li>
-                            <li><a href="trame_docs_markets_mfe.html">MFE</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solvers <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="trame_docs_solvers.html">Solvers</a></li>
-                            <li class="divider"></li>
-                            <li><a href="trame_docs_solvers_arc_newton.html">Arc Newton</a></li>
-                            <li><a href="trame_docs_solvers_cupids_lp.html">Cupids LP</a></li>
-                            <li><a href="trame_docs_solvers_darum.html">DA RUM</a></li>
-                            <li><a href="trame_docs_solvers_eap_nash.html">EAP Nash</a></li>
-                            <li><a href="trame_docs_solvers_ipfp.html">IPFP</a></li>
-                            <li><a href="trame_docs_solvers_jacobi.html">Jacobi</a></li>
-                            <li><a href="trame_docs_solvers_max_welfare.html">Max Welfare</a></li>
-                            <li><a href="trame_docs_solvers_nodal_newton.html">Nodal Newton</a></li>
-                            <li><a href="trame_docs_solvers_oap_lp.html">OAP LP</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="trame_docs_models.html">Models</a></li>
-                </ol>
+                <h1 class="page-header">
+                    Welcome | TraME
+                </h1>
+            </div>
+            <div class="col-lg-12">
+            <p>TraME (Transportation Methods for Econometrics) is an ecosystem of libraries used for solving problems of equilibrium computation and estimation in consumer demand and matching frameworks via the Mass Transportation Approach.</p>
+            </div>
+            <div class="col-lg-12">
+            &nbsp;
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-terminal fa-2x fa-fw"></i> Code 
+                        <span style="float:right;">
+                            <a href="https://github.com/trame-project" target="_blank"><i class="fa fa-github-square fa-2x" style="color:black"></i></a>
+                        </span></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Versions</p>
+                        <a href="trame.html" target="_blank" class="btn btn-default">TraME</a>
+                        <a href="trame-r.html" target="_blank" class="btn btn-default">TraME-R</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-2x fa-compass"></i> User Guides</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Guide</p>
+                        <a href="#" class="btn btn-default">Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-2x fa-cube"></i> Other</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Other</p>
+                        <a href="#" class="btn btn-default">Link</a>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- /.row -->
 
-
-<h3 style="text-align: center;"><strong style="font-size: 130%;"><u>Transportation Methods for Econometrics</u></strong></h3>
-<p> &nbsp </p>
-
-<p>TraME (<b><i>Tra</i></b>nsportation <b><i>M</i></b>ethods for <b><i>E</i></b>conometrics) is a C++ library for solving problems of equilibrium computation and estimation in consumer demand and matching frameworks via the Mass Transportation Approach.</p>
-
-<b>Features</b>
-<br>
-<table border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-    <tr>
-        <td style="text-align: left; vertical-align: top; width: 50%;">
-        <ul>
-            <li>Flexible, templated library</li>
-            <li>Built on the <a href="http://arma.sourceforge.net" target="_blank">Armadillo C++ linear algebra library</a></li>
-            <li>Can link with Gurobi or GLPK</li>
-        </ul>
-        </td>
-        <td>
-        &nbsp;
-        </td>
-        <td class="line" style="vertical-align: top;">
-        <br>
-        </td>
-        <td style="text-align: left; vertical-align: top; width: 50%;">
-        <ul>
-            <li>Several popular random utility specifications,
-                as well as models with transferable, non-transferable, and imperfectly transferable utility</li>
-            <li>Numerous equilibrium solvers, including the iterative proportional fitting procedure (IPFP) and the deferred acceptance algorithm
-            <li>Maximum likelihood- and moment matching-based estimation</li>
-        </ul>
-        </td>
-    </tr>
-    </tbody>
-</table>
-
-<br>
-
-<p><strong>License</strong>: TraME is licensed under the GNU General Public License (GPL) version 2, or (at your option) any later version. The experimental nature of this software means that it is intended for academic use only.</p>
-
-<p><strong>Authors</strong>:</p>
-<ul>
-    <li>TraME Team: <a href="http://alfredgalichon.com/" target="_blank">Alfred Galichon</a> (R) and <a href="http://alfredgalichon.com/" target="_blank">Keith O'Hara</a> (C++)
-    <li>Contributors: Yifei Sun, <a href="https://sites.google.com/site/webersimonsite/home" target="_blank">Simon Weber</a></li>
-</ul>
-
-<hr>
-
-<h3 style="text-align: left;"><strong style="font-size: 130%;">Download</strong> <a href="https://travis-ci.org/TraME-Project/TraME" target="_blank"><img src="https://travis-ci.org/TraME-Project/TraME.svg?branch=master" alt="BMR Build"></a></h3>
-
-<!-- <p>Current version: 2017-03-15.</p> -->
-<ul>
-    <li>The source code is available on <a href="https://github.com/TraME-Project/TraME" target="_blank">GitHub</a>.</li>
-    <li>To use the linear programming features, TraME requires an installation of Gurobi or GLPK.</li>
-    <li><strong>Note:</strong> Gurobi performs significantly better than GLPK.</li>
-</ul>
-
-<p>TraME can be installed in the standard way:</p>
-<pre class="brush: bash;"> 
-./configure
-make
-make install</pre>
-
-<p>This will install the library into /usr/local</p>
-
-    <hr>
+        <hr>
 
         <!-- Footer -->
         <footer>
@@ -239,6 +152,13 @@ make install</pre>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
 
 </body>
 
