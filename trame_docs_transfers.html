@@ -174,7 +174,8 @@
     <div class="panel panel-default">
     <div class="panel-body">
         <a href="#Intro">Introduction</a> <br>
-        <a href="#IP">Implicit Parameterization</a>
+        <a href="#Imp">Implicit Parameterization</a> <br>
+        <a href="#Exp">Explicit Parameterization</a>
     </div>
     </div>
 </div>
@@ -184,13 +185,47 @@
 
 <h3 style="text-align: left;" id="Intro"><strong style="font-size: 120%;">Introduction</strong></h3>
 
-.
+The transfers classes describe how utilities can be moved between two sides of a market.
 
 <hr>
 
-<h3 style="text-align: left;" id="IP"><strong style="font-size: 120%;">Implicit Parameterization</strong></h3>
+<h3 style="text-align: left;" id="Imp"><strong style="font-size: 120%;">Implicit Parameterization</strong></h3>
 
-.
+Systematic utilities are in a feasible set $(U_{xy},V_{xy}) \in \mathcal{F}_{xy}$. We can represent the feasible set $\mathcal{F}_{xy}$ by means of a function $\Psi$, defined as
+$$\Psi_{xy} (u,v) = \min \left\{ t \in \mathbb{R} : (u - t, v - t) \in \mathcal{F}_{xy} \right\}$$
+
+<ul>
+    <li> ETU $:=$ Exponentially Transferable Utility:
+		$$\Psi(u,v) = \tau \times \log \left( \frac{\exp((u-\alpha)/\tau) + \exp((v-\gamma)/\tau)}{2} \right)$$ </li>
+	<li> LTU $:=$ Linearly Transferable Utility:
+		$$\Psi (u,v) = \lambda \times u + (1-\lambda) \times v - \Phi_{xy}$$</li>
+	<li> NTU $:=$ Non-Transferable Utility:
+		$$\Psi (u,v) = \max( u - \alpha_{xy}, v - \gamma_{xy} )$$</li>
+	<li> TU $:=$ Transferable Utility:
+		$$\Psi (u,v) = \frac{u + v - \Phi_{xy}}{2}$$</li>
+</ul>
+where $\Phi = \alpha + \gamma$.
+
+<h3 style="text-align: left;" id="Exp"><strong style="font-size: 120%;">Explicit Parameterization</strong></h3>
+
+As an alternative to the implicit parameterization, we can define the efficient frontier of $\mathcal{F}_{xy}$ by $u = \mathcal{U}_{xy} (w)$ and $v = \mathcal{V}_{xy} (w)$, which are increasing and decreasing in $w$, respectively, where $u$ and $v$ solve
+$$\Psi_{xy} (u,v) = 0$$
+where
+$$u - v = w$$
+
+In many cases, $\mathcal{U}$ and $\mathcal{V}$ have simple expressions:
+<ul>
+    <li> ETU: 
+	    $$\mathcal{U}_{xy} (w) = - \tau \log \left[ \frac{1}{2} \left( \exp \left(- \frac{\alpha}{\tau} \right) + \exp \left( - \frac{w + \gamma}{\tau} \right) \right) \right]$$
+		and
+        $$\mathcal{V}_{xy} (w) = - \tau \log \left[ \frac{1}{2} \left( \exp \left(- \frac{\gamma}{\tau} \right) + \exp \left( \frac{w - \alpha}{\tau} \right) \right) \right]$$</li>
+	<li> LTU: 
+	    $$\mathcal{U}_{xy} (w) = \Phi_{xy} + (1-\lambda) w \ \text{ and } \ \mathcal{V}_{xy} (w) = \Phi_{xy} - (1-\lambda) w$$</li>
+	<li> NTU: 
+	    $$\mathcal{U}_{xy} (w) = \min \{ \alpha_{xy}, w + \gamma_{xy} \} \ \text{ and } \ \mathcal{V}_{xy} (w) = \min \{ \alpha_{xy} - w, \gamma_{xy} \}$$</li>
+	<li> TU: 
+	    $$\mathcal{U}_{xy} (w) = \frac{\Phi_{xy} + w}{2} \ \text{ and } \ \mathcal{V}_{xy} (w) = \frac{\Phi_{xy} - w}{2}$$</li>
+</ul>
 
 <hr>
 
